@@ -1,0 +1,7 @@
+def palindrome(word):
+    c = True
+    for i in range(0, len(word)):
+        if word[i].upper() != word[len(word)-1-i].upper():
+            c = False
+    if c:
+        print("word " + strword(word) + " is palindrome")

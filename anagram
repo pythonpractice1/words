@@ -1,0 +1,13 @@
+
+def anagram(word, _word):
+    copy = list(_word)
+    c = True
+
+    for l in word:
+        if l in copied:
+            copied.remove(l)
+        else:
+            c = False
+
+    if c and len(copy)==0:
+        print("word " + strword(_word) + " is anagram of word " + strword(_word))
