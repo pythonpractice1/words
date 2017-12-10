@@ -1,0 +1,29 @@
+#game function test
+
+def play():
+	from_ = 'R'
+	to_ = 'R'
+	while from == 'R' or to == 'R':
+		pos = ['F', 'F', 'F', ' ', 'T', 'T', 'T']
+		print("Position ['1', '2', '3', '4', '5', '6', '7',]")
+		print("Frogs/Toads ", pos)
+		while True:
+			from_ = input("from: ")
+			if from_ == 'R':
+				break
+			if from == 'E':
+				break
+			while not from_ in ['1', '2', '3', '4', '5', '6', '7', 'R', 'E'] or pos[int(from_) - 1] == ' ':
+				from_ = input("From: ")
+			to_ = input("To: ")
+			if from_ == 'R':
+				break
+			if from_ == 'E':
+				break
+			while not to_ in ['1', '2', '3', '4', '5', '6', '7', 'R', 'E'] :
+				to_ = input("To: ")
+			move(pos, int(from_) - 1, int(to_) -1)
+			print("Position ['1', '2', '3', '4', '5', '6', '7']")
+			print("Frogs/Toads ", pos)
+			if win(pos):
+				break
